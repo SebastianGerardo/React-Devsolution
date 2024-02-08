@@ -1,12 +1,26 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function AppApi() {
   const [contador, setContador] = useState(0)
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    const getData = async () => {
+      const fetchData = await fetch("https://fakestoreapi.com/products");
+      const response = await fetchData.json()
+      
+      setData(response)
+    }
+
+    getData()
+  }, [])
 
   const restar = () => {
     setContador(prev => prev - 1)
   }
+
+  console.log(data)
 
   return (
     <>
