@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
+import Card from './components/Card'
 import './App.css'
 
 function AppApi() {
-  const [contador, setContador] = useState(0)
   const [data, setData] = useState([])
 
   useEffect(() => {
@@ -16,32 +16,20 @@ function AppApi() {
     getData()
   }, [])
 
-  const restar = () => {
-    setContador(prev => prev - 1)
-  }
-
-  console.log(data)
-
   return (
     <>
-      <h1>Vite + React</h1>
       <div className="card">
-        <div>
-          <button onClick={restar}>
-            Restar
-          </button>
-          <h1>{contador}</h1>
-          <button onClick={() => setContador(prev => prev + 1)}>
-            Sumar
-          </button>
-        </div>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <h1>Productos</h1>
+        {data && data.length > 0 && data.map((product, index) => (
+          <Card
+            key={index}
+            titulo={product.title} 
+            categoria={product.category} 
+            precio={product.price} 
+            image={product.image} 
+          />
+        ))}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
