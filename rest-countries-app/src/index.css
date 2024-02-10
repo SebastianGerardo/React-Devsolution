@@ -1,9 +1,18 @@
 .countries {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
-  max-width: 1500px;
+  max-width: 1400px;
   margin: 0 auto;
+}
+
+.searching {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px;
 }
