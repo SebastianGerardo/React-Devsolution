@@ -1,0 +1,36 @@
+.card {
+  width: 14rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  gap: 2px;
+}
+
+.card-header {
+  display: block;
+  width: 100%;
+  height: 8rem;
+}
+
+.card-header > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 4px;
+}
+
+.card-body > h1 {
+  margin: 4px 0px;
+}
+
+.card-description {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
