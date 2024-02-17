@@ -1,9 +1,10 @@
-import { useState } from 'react'
 import Home from './components/Home'
 import Contact from './components/Contact'
 import About from './components/About'
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
+import { Route, Routes, Link } from 'react-router-dom'
+import Product from './components/Product'
 import './App.css'
+import Products from './components/Products'
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
           </Link>
         </header>
         <Routes>
-          <Route path='/home' element={<Home />} />
+          <Route path='/' element={<Products />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/product/:idProduct' element={<Product />} />
           <Route path='/about' Component={About} />
         </Routes>
     </>
