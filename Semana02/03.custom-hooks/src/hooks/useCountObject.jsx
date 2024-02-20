@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-export function useCount (initialValue = 0) {
-  const [count, setCount] = useState(initialValue)
+export function useCountObject ({ initial = 2 } = {}) {
+  const [count, setCount] = useState(initial)
 
   const addCount = () => {
     setCount(prev => prev + 1)
