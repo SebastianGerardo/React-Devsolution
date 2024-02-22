@@ -1,7 +1,12 @@
 const Footer = () => {
   return (
-    <div>
-      
+    <div className="navbar">
+      <span>
+        Logo
+      </span>
+      <p>
+        Copyright 2024
+      </p>
     </div>
   )
 }

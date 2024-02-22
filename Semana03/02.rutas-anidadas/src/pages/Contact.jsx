@@ -1,8 +1,9 @@
+
 const Contact = () => {
   return (
-    <div>
-      soy el contact
-    </div>
+      <section className="home">
+        Soy el contact
+      </section>
   )
 }
 
