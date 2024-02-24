@@ -1,6 +1,6 @@
-const Input = () => {
+const Input = (props) => {
   return (
-    <input className="w-full border-2 p-2" placeholder="Buscar..." />
+    <input className="w-full border-2 p-2" placeholder="Buscar..." {...props} />
   )
 }
 
