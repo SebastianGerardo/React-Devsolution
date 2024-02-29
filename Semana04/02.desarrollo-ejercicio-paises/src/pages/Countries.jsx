@@ -16,7 +16,7 @@ const Countries = () => {
   }, [])
 
   return (
-    <div>
+    <div className="m-2 grid grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px] mx-auto">
       {data && data.length > 0 && data.map((obj) => (
         <Card key={obj.name.common} data={obj} />
       ))}
