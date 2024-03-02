@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 const Card = ({ data }) => {
 
   return (
-    <section className='grid grid-cols-[230px_auto] w-full max-w-[600px] max-h-[220px] bg-[#3c3e44] text-[#F5F5F5] rounded-lg'>
-      <div className='w-full max-h-[220px]'>
+    <section className='grid grid-cols-1 md:grid-cols-[230px_auto] w-full max-w-[600px] md:max-h-[220px] bg-[#3c3e44] text-[#F5F5F5] rounded-lg'>
+      <div className='w-full md:max-h-[220px]'>
         <img src={data.image} alt="" className='w-full h-full object-cover rounded-l-lg' />
       </div>
       <div className='p-[13.5px] flex flex-col gap-2'>
