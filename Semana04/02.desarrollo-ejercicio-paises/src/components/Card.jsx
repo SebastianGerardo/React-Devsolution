@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const Card = ({ data }) => {
 
   return (
-    <div className='w-full shadow-sm rounded-sm bg-white'>
+    <Link to={`/country/${data.name.common}`} className='w-full shadow-sm rounded-sm bg-white'>
       <div className='w-full h-48'>
         <img className='w-full h-full object-cover ' src={data.flags.svg} alt={data.flags.alt} />
       </div>
@@ -19,7 +20,7 @@ const Card = ({ data }) => {
           </li>
         </ul>
       </div>
-    </div>
+    </Link>
   )
 }
 
